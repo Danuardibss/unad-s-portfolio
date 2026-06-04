@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Story - SOC Portfolio</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+        .cyber-grid {
+            background-image: linear-gradient(to right, rgba(31, 41, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(31, 41, 55, 0.1) 1px, transparent 1px);
+            background-size: 4rem 4rem;
+            mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#07070a] text-gray-300 min-h-screen relative overflow-x-hidden">
+
+    <div class="absolute inset-0 cyber-grid pointer-events-none"></div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 relative z-10 space-y-12">
+        <!-- HEADER -->
+        <header class="space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mono tracking-wider animate-pulse">
+                <i class="fa-solid border-2 border-emerald-400 rounded-full p-0.5 w-2 h-2 bg-emerald-400"></i> STATUS: JUST IN CASE YOU'RE CURIOUS
+            </div>
+            <div class="space-y-1">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white">Danuar Asmoro</h1>
+                <p class="text-lg mono text-cyan-400">&gt; SOC Analyst | Cybersecurity Researcher | Blue Teamer</p>
+            </div>
+        </header>
+
+        <!-- 🧭 NAVIGATION MENU -->
+        <nav class="flex flex-wrap gap-2 border-b border-slate-900 pb-4 mono text-xs pt-4">
+            <a href="index.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-terminal mr-1"></i> Dashboard
+            </a>
+            <a href="story.html" class="px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all">
+                <i class="fa-solid fa-user-secret mr-1"></i> My Background
+            </a>
+            <a href="certs.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-id-card-clip mr-1"></i> Certificates
+            </a>
+            <a href="awards.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-trophy mr-1"></i> Awards
+            </a>
+        </nav>
+
+        <!-- CONTENT -->
+        <div class="space-y-6">
+            <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2"><i class="fa-solid fa-history text-cyan-500"></i> // ORIGIN_STORY.txt</h2>
+            <div class="p-6 rounded-xl border border-slate-900 bg-slate-950/20 space-y-5 text-sm leading-relaxed text-slate-400">
+                <p>
+                    Perjalanan saya di industri teknologi dibangun di atas pemahaman yang kuat tentang bagaimana data bergerak dari infrastruktur fisik terkecil hingga ke sistem jaringan yang kompleks. Saya mempelajari dasar arsitektur jaringan secara mendalam, termasuk teknik instalasi jaringan fiber optik baik skala perumahan (<span class="text-white font-semibold">FTTH</span>) maupun korporat/gedung bertingkat (<span class="text-white font-semibold">FTTB</span>). Pemahaman ini memberi saya perspektif yang jelas tentang bagaimana data dapat berjalan di lapisan fisik (physical layer).
+                </p>
+                <p>
+                    Tidak berhenti di layer fisik, saya memperluas kompetensi ke ranah <span class="text-cyan-400 font-semibold">System Administration (SysAdmin)</span>. Di fase ini, saya mendalami manajemen server, konfigurasi operating system (terutama berbasis Linux dan Mikrotik RouterOS), serta pengelolaan hak akses dan arsitektur sistem operasi. Menguasai bagaimana server bekerja dan dikelola memberikan saya fondasi krusial untuk menganalisis anomali sistem secara struktural.
+                </p>
+                <p>
+                    Namun, titik balik terbesar saya adalah ketika saya menyadari bahwa membangun dan mengelola infrastruktur saja tidak cukup jika perimeter tersebut rapuh dari serangan. Hal ini mendorong saya untuk mendedikasikan fokus penuh pada sektor <span class="text-emerald-400 font-semibold">Cybersecurity</span>, khususnya di bidang <span class="text-emerald-400 font-semibold">Blue Teaming</span> dan operasi <span class="text-emerald-400 font-semibold">Security Operations Center (SOC)</span>.
+                </p>
+                <p>
+                    Bagi saya, kombinasi keahlian dari instalasi jaringan, SysAdmin, hingga taktik pertahanan siber menjadikan saya seorang analis yang versatile. Saya melihat pertahanan siber bukan sekadar membaca dasbor alert, melainkan seni mengorelasikan log data, mengamankan seluruh arsitektur jaringan, serta menutup celah sebelum penyerang sempat mengeksploitasinya.
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
+            <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/danuar-asmoro-46a16931b/" target="_blank" class="hover:text-cyan-400 transition-colors">
+                    <i class="fa-brands fa-linkedin mr-1"></i> LinkedIn
+                </a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">GitHub</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

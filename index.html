@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SOC Portfolio</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'Fira Code', monospace; }
+        .cyber-grid {
+            background-image: linear-gradient(to right, rgba(31, 41, 55, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(31, 41, 55, 0.1) 1px, transparent 1px);
+            background-size: 4rem 4rem;
+            mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-[#07070a] text-gray-300 min-h-screen relative overflow-x-hidden selection:bg-cyan-500 selection:text-black">
+
+    <div class="absolute inset-0 cyber-grid pointer-events-none"></div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 relative z-10 space-y-12">
+        
+        <header class="space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mono tracking-wider animate-pulse">
+                <i class="fa-solid border-2 border-emerald-400 rounded-full p-0.5 w-2 h-2 bg-emerald-400 animate-ping"></i> STATUS: WELCOME TO MY DASHBOARD, LADS!
+            </div>
+            
+            <div class="space-y-2">
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                        Danuar Asmoro
+                    </span>
+                </h1>
+                <p class="text-lg mono text-cyan-400">&gt; SOC Analyst | Cybersecurity Researcher | Blue Teamer</p>
+            </div>
+
+            <p class="text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed">
+                Cybersecurity professional specializing in Security Operations (SOC) and Blue Teaming. Highly proficient in real-time security monitoring, log analysis, and incident response utilizing industry-standard SIEM platforms.
+            </p>
+
+            <div class="flex gap-4 pt-2">
+                <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
+                    View Investigations
+                </a>
+                <a href="mailto:danuarasmoro@gmail.com" class="px-5 py-2.5 border border-slate-800 rounded-lg text-sm mono text-slate-400 hover:text-white hover:border-slate-600 transition-all">
+                    <i class="fa-solid fa-envelope mr-1"></i> Contact Me
+                </a>
+            </div>
+        </header>
+
+        <nav class="flex flex-wrap gap-2 border-b border-slate-900 pb-4 mono text-xs pt-4">
+            <a href="index.html" class="px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all">
+                <i class="fa-solid fa-terminal mr-1"></i> Dashboard
+            </a>
+            <a href="story.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-user-secret mr-1"></i> My Background
+            </a>
+            <a href="certs.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-id-card-clip mr-1"></i> Certificates
+            </a>
+            <a href="awards.html" class="px-4 py-2 rounded-lg border border-slate-900 bg-slate-950/20 text-slate-400 hover:text-white hover:border-slate-700 transition-all">
+                <i class="fa-solid fa-trophy mr-1"></i> Awards
+            </a>
+        </nav>
+
+        <section class="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono mono text-xs pt-4">
+            <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm">
+                <div class="text-slate-500 uppercase tracking-wider">Daily Alerts Triaged</div>
+                <div class="text-2xl font-bold text-white mt-1">Up to 100 Logs</div>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm">
+                <div class="text-slate-500 uppercase tracking-wider">SLA Status</div>
+                <div class="text-2xl font-bold text-emerald-400 mt-1">Compliant</div>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm col-span-2 md:col-span-1">
+                <div class="text-slate-500 uppercase tracking-wider">English Proficiency</div>
+                <div class="text-2xl font-bold text-cyan-400 mt-1">720 TOEIC</div>
+            </div>
+        </section>
+
+        <section id="cases" class="space-y-6 pt-4">
+            <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
+                <i class="fa-solid fa-terminal text-cyan-500"></i> // CASE_STUDIES_AND_INVESTIGATIONS
+            </h2>
+
+            <div class="space-y-4">
+                <div class="group p-6 rounded-xl border border-slate-900 bg-slate-950/20 hover:bg-slate-950/60 hover:border-cyan-500/30 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-xs mono text-red-400 bg-red-950/40 border border-red-900/50 px-2 py-0.5 rounded">SECURITY HARDENING</span>
+                        <span class="text-xs mono text-slate-600">2026</span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        Linux Internal Server Hardening via CIS Benchmarks
+                    </h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                        Mengeksekusi pengerasan keamanan pada server Linux internal berdasarkan standarisasi CIS Benchmarks. Mengurangi area permukaan serangan potensial secara drastis dengan menonaktifkan port yang tidak terpakai serta mengamankan file konfigurasi penting.
+                    </p>
+                    <div class="flex gap-2 mt-4 mono text-xs text-slate-500">
+                        <span>#LinuxServer</span> <span>#CIS-Benchmarks</span> <span>#SystemHardening</span>
+                    </div>
+                </div>
+
+                <div class="group p-6 rounded-xl border border-slate-900 bg-slate-950/20 hover:bg-slate-950/60 hover:border-cyan-500/30 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-xs mono text-cyan-400 bg-cyan-950/40 border border-cyan-900/50 px-2 py-0.5 rounded">INCIDENT RESPONSE</span>
+                        <span class="text-xs mono text-slate-600">2026</span>
+                    </div>
+                    <h3 class="text-base font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        Real-Time Threats Mitigation & NIST Investigation Lifecycle
+                    </h3>
+                    <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                        Memantau dan menganalisis alert keamanan harian menggunakan platform SIEM Wazuh dan Stellar Cyber. Menjalankan investigasi insiden terstruktur mengikuti NIST Incident Response Life Cycle guna meminimalkan Mean-Time-To-Detection (MTTD) dan menangani ancaman tinggi sebelum berdampak pada produksi.
+                    </p>
+                    <div class="flex gap-2 mt-4 mono text-xs text-slate-500">
+                        <span>#Wazuh</span> <span>#StellarCyber</span> <span>#NIST-Framework</span> <span>#ITSM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-6 pt-4">
+            <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i> // SECURITY_ARSENAL
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mono text-xs">
+                <div class="p-4 border border-slate-900 bg-slate-950/10 rounded-lg">
+                    <span class="text-slate-500 block mb-2">// SIEM & ANALYSIS</span>
+                    <p class="text-cyan-400">Wazuh, Stellar Cyber, Tehtris, SOAR, Wireshark</p>
+                </div>
+                <div class="p-4 border border-slate-900 bg-slate-950/10 rounded-lg">
+                    <span class="text-slate-500 block mb-2">// NET SECURITY</span>
+                    <p class="text-yellow-500">Fortinet, MikroTik (Firewall, VLAN, Adv Routing)</p>
+                </div>
+                <div class="p-4 border border-slate-900 bg-slate-950/10 rounded-lg">
+                    <span class="text-slate-500 block mb-2">// OS & VIRTUALIZATION</span>
+                    <p class="text-emerald-400">Linux, Windows Server, Proxmox VE, VMware ESXi, Docker</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
+            <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/danuar-asmoro-46a16931b/" target="_blank" class="hover:text-cyan-400 transition-colors">
+                    <i class="fa-brands fa-linkedin mr-1"></i> LinkedIn
+                </a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">GitHub</a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
