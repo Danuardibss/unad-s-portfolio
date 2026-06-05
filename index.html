@@ -29,6 +29,7 @@
 
     <main class="max-w-4xl mx-auto px-6 py-16 relative z-10 space-y-12">
         
+        <!-- HEADER -->
         <header class="space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mono tracking-wider animate-pulse">
                 <i class="fa-solid border-2 border-emerald-400 rounded-full p-0.5 w-2 h-2 bg-emerald-400 animate-ping"></i> STATUS: WELCOME TO MY DASHBOARD, LADS!
@@ -51,36 +52,10 @@
                 <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
                     View Investigations
                 </a>
-                <div class="max-w-md mx-auto p-6 rounded-xl border border-slate-900 bg-slate-950/20 space-y-4">
-    <h3 class="text-sm mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2">
-        <i class="fa-solid fa-envelope"></i> // SEND_MESSAGE.exe
-    </h3>
-    
-    <!-- FORM UTAMA -->
-    <form action="https://formspree.io/f/mykaznjy" method="POST" class="space-y-4 text-sm">
-        <div>
-            <label class="block text-xs mono text-slate-500 mb-1">YOUR_EMAIL :</label>
-            <input type="email" name="email" required
-                class="w-full p-3 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-700" 
-                placeholder="Ex: hrd@company.com">
-        </div>
-        
-        <div>
-            <label class="block text-xs mono text-slate-500 mb-1">MESSAGE_PAYLOAD :</label>
-            <textarea name="message" rows="4" required
-                class="w-full p-3 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-700" 
-                placeholder="Tulis pesan lo di sini..."></textarea>
-        </div>
-
-        <button type="submit" 
-            class="w-full py-3 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mono text-xs uppercase tracking-wider hover:bg-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <i class="fa-solid fa-paper-plane animate-pulse"></i> Execute Deploy Message
-        </button>
-    </form>
-</div>
             </div>
         </header>
 
+        <!-- NAVIGATION -->
         <nav class="flex flex-wrap gap-2 border-b border-slate-900 pb-4 mono text-xs pt-4">
             <a href="index.html" class="px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all">
                 <i class="fa-solid fa-terminal mr-1"></i> Dashboard
@@ -96,6 +71,7 @@
             </a>
         </nav>
 
+        <!-- STATS SECTION -->
         <section class="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono mono text-xs pt-4">
             <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm">
                 <div class="text-slate-500 uppercase tracking-wider">Daily Alerts Triaged</div>
@@ -111,6 +87,7 @@
             </div>
         </section>
 
+        <!-- CASE STUDIES SECTION -->
         <section id="cases" class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-terminal text-cyan-500"></i> // CASE_STUDIES_AND_INVESTIGATIONS
@@ -151,6 +128,7 @@
             </div>
         </section>
 
+        <!-- SECURITY ARSENAL SECTION -->
         <section class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-shield-halved text-emerald-400"></i> // SECURITY_ARSENAL
@@ -171,6 +149,41 @@
             </div>
         </section>
 
+        <!-- CONTACT FORM SECTION (SEKARANG DISINI, RAPI & ELEGAN) -->
+        <section class="pt-4 max-w-xl">
+            <div class="p-5 rounded-xl border border-slate-900 bg-slate-950/20">
+                <h3 class="text-xs mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2 mb-4">
+                    <i class="fa-solid fa-envelope"></i> // SEND_MESSAGE.exe
+                </h3>
+                
+                <form action="https://formspree.io/f/mykaznjy" method="POST" class="space-y-3 text-xs">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block mono text-slate-500 mb-1">YOUR_EMAIL :</label>
+                            <input type="email" name="email" required
+                                class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800" 
+                                placeholder="Ex: hrd@company.com">
+                        </div>
+                        <div>
+                            <label class="block mono text-slate-500 mb-1">EXECUTE_ACTION :</label>
+                            <button type="submit" 
+                                class="w-full py-2.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mono uppercase tracking-wider hover:bg-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer h-[38px] mt-[1px]">
+                                <i class="fa-solid fa-paper-plane animate-pulse"></i> Deploy Message
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block mono text-slate-500 mb-1">MESSAGE_PAYLOAD :</label>
+                        <textarea name="message" rows="2" required
+                            class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800 resize-none" 
+                            placeholder="Tulis pesan lo di sini..."></textarea>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
         <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
             <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
             <div class="flex gap-4">
