@@ -48,10 +48,52 @@
                 Cybersecurity professional specializing in Security Operations (SOC) and Blue Teaming. Highly proficient in real-time security monitoring, log analysis, and incident response utilizing industry-standard SIEM platforms.
             </p>
 
-            <div class="flex gap-4 pt-2">
-                <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
-                    View Investigations
-                </a>
+            <!-- CONTAINER TOMBOL UTAMA -->
+            <div class="space-y-4 pt-2">
+                <div class="flex flex-wrap gap-4">
+                    <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
+                        View Investigations
+                    </a>
+                    
+                    <!-- TOMBOL CONTACT ME JADI PEMANTIK (TOGGLE) -->
+                    <button onclick="toggleContactForm()" class="px-5 py-2.5 bg-slate-900 border border-slate-800 text-slate-300 font-medium rounded-lg text-sm hover:border-cyan-500/50 hover:text-white transition-all duration-300 flex items-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-envelope" id="envelope-icon"></i> <span id="btn-text">Contact Me</span>
+                    </button>
+                </div>
+
+                <!-- PANEL FORMSPREE YANG BISA DIHIDE (AWALNYA TERSEMBUNYI) -->
+                <div id="contact-panel" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out max-w-xl">
+                    <div class="p-5 mt-2 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-md">
+                        <h3 class="text-xs mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2 mb-4">
+                            <i class="fa-solid fa-terminal text-cyan-500"></i> // ESTABLISHING_SECURE_CHANNEL.exe
+                        </h3>
+                        
+                        <form action="https://formspree.io/f/mykaznjy" method="POST" class="space-y-3 text-xs">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block mono text-slate-500 mb-1">YOUR_EMAIL :</label>
+                                    <input type="email" name="email" required
+                                        class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800" 
+                                        placeholder="Ex: hrd@company.com">
+                                </div>
+                                <div>
+                                    <label class="block mono text-slate-500 mb-1">EXECUTE_ACTION :</label>
+                                    <button type="submit" 
+                                        class="w-full py-2.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mono uppercase tracking-wider hover:bg-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer h-[38px] mt-[1px]">
+                                        <i class="fa-solid fa-paper-plane animate-pulse"></i> Deploy Message
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block mono text-slate-500 mb-1">MESSAGE_PAYLOAD :</label>
+                                <textarea name="message" rows="2" required
+                                    class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800 resize-none" 
+                                    placeholder="Tulis pesan lo di sini..."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -149,40 +191,6 @@
             </div>
         </section>
 
-        <!-- CONTACT FORM SECTION (SEKARANG DISINI, RAPI & ELEGAN) -->
-        <section class="pt-4 max-w-xl">
-            <div class="p-5 rounded-xl border border-slate-900 bg-slate-950/20">
-                <h3 class="text-xs mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2 mb-4">
-                    <i class="fa-solid fa-envelope"></i> // SEND_MESSAGE.exe
-                </h3>
-                
-                <form action="https://formspree.io/f/mykaznjy" method="POST" class="space-y-3 text-xs">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block mono text-slate-500 mb-1">YOUR_EMAIL :</label>
-                            <input type="email" name="email" required
-                                class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800" 
-                                placeholder="Ex: hrd@company.com">
-                        </div>
-                        <div>
-                            <label class="block mono text-slate-500 mb-1">EXECUTE_ACTION :</label>
-                            <button type="submit" 
-                                class="w-full py-2.5 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 font-semibold mono uppercase tracking-wider hover:bg-cyan-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer h-[38px] mt-[1px]">
-                                <i class="fa-solid fa-paper-plane animate-pulse"></i> Deploy Message
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <label class="block mono text-slate-500 mb-1">MESSAGE_PAYLOAD :</label>
-                        <textarea name="message" rows="2" required
-                            class="w-full p-2.5 rounded-lg border border-slate-900 bg-[#07070a] text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-all mono placeholder:text-slate-800 resize-none" 
-                            placeholder="Tulis pesan lo di sini..."></textarea>
-                    </div>
-                </form>
-            </div>
-        </section>
-
         <!-- FOOTER -->
         <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
             <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
@@ -197,6 +205,27 @@
         </footer>
 
     </main>
+
+    <!-- LOGIC JAVASCRIPT BUAT HADIRIN EFEK TOGGLE/MELUNCUR -->
+    <script>
+        function toggleContactForm() {
+            const panel = document.getElementById('contact-panel');
+            const btnText = document.getElementById('btn-text');
+            const icon = document.getElementById('envelope-icon');
+            
+            if (panel.style.maxHeight === '0px' || !panel.style.maxHeight) {
+                // Saat panel dibuka
+                panel.style.maxHeight = '500px';
+                btnText.innerText = 'Close Panel';
+                icon.className = 'fa-solid fa-xmark text-red-400';
+            } else {
+                // Saat panel ditutup
+                panel.style.maxHeight = '0px';
+                btnText.innerText = 'Contact Me';
+                icon.className = 'fa-solid fa-envelope';
+            }
+        }
+    </script>
 
 </body>
 </html>
