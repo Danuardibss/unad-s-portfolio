@@ -253,9 +253,8 @@
         const fortinetDropdown = document.getElementById('fortinet-dropdown');
         const fortinetArrow = document.getElementById('fortinet-arrow');
 
-        // Handler Klik Tombol Verify
         fortinetBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Mencegah event bubbling naik ke document
+            e.stopPropagation();
             const isClosed = fortinetDropdown.classList.contains('pointer-events-none');
             
             if (isClosed) {
@@ -271,7 +270,6 @@
             }
         });
 
-        // Handler klik di luar area menu (Otomatis nutup)
         document.addEventListener('click', (e) => {
             if (!fortinetDropdown.contains(e.target) && e.target !== fortinetBtn) {
                 fortinetDropdown.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
