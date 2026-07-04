@@ -29,7 +29,6 @@
 
     <main class="max-w-4xl mx-auto px-6 py-16 relative z-10 space-y-12">
         
-        <!-- HEADER -->
         <header class="space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mono tracking-wider animate-pulse">
                 <i class="fa-solid border-2 border-emerald-400 rounded-full p-0.5 w-2 h-2 bg-emerald-400 animate-ping"></i> STATUS: WELCOME TO MY DASHBOARD, LADS!
@@ -48,20 +47,17 @@
     Cybersecurity professional and <span class="text-emerald-400 font-semibold">1st Place Winner of the Smart Innovation Challenge 2025</span>, specializing in Security Operations (SOC) and Blue Teaming. Highly proficient in real-time security monitoring, log analysis, and incident response utilizing industry-standard SIEM platforms.
 </p>
 
-            <!-- CONTAINER TOMBOL UTAMA -->
             <div class="space-y-4 pt-2">
                 <div class="flex flex-wrap gap-4">
                     <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
                         View Investigations
                     </a>
                     
-                    <!-- TOMBOL CONTACT ME JADI PEMANTIK (TOGGLE) -->
                     <button onclick="toggleContactForm()" class="px-5 py-2.5 bg-slate-900 border border-slate-800 text-slate-300 font-medium rounded-lg text-sm hover:border-cyan-500/50 hover:text-white transition-all duration-300 flex items-center gap-2 cursor-pointer">
                         <i class="fa-solid fa-envelope" id="envelope-icon"></i> <span id="btn-text">Contact Me</span>
                     </button>
                 </div>
 
-                <!-- PANEL FORMSPREE YANG BISA DIHIDE (AWALNYA TERSEMBUNYI) -->
                 <div id="contact-panel" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out max-w-xl">
                     <div class="p-5 mt-2 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-md">
                         <h3 class="text-xs mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2 mb-4">
@@ -97,7 +93,6 @@
             </div>
         </header>
 
-        <!-- NAVIGATION -->
         <nav class="flex flex-wrap gap-2 border-b border-slate-900 pb-4 mono text-xs pt-4">
             <a href="index.html" class="px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all">
                 <i class="fa-solid fa-terminal mr-1"></i> Dashboard
@@ -113,7 +108,6 @@
             </a>
         </nav>
 
-        <!-- STATS SECTION -->
         <section class="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono mono text-xs pt-4">
             <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm">
                 <div class="text-slate-500 uppercase tracking-wider">Daily Alerts Triaged</div>
@@ -129,7 +123,6 @@
             </div>
         </section>
 
-        <!-- CASE STUDIES SECTION -->
         <section id="cases" class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-terminal text-cyan-500"></i> // CASE_STUDIES_AND_INVESTIGATIONS
@@ -170,7 +163,6 @@
             </div>
         </section>
 
-        <!-- SECURITY ARSENAL SECTION -->
         <section class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-shield-halved text-emerald-400"></i> // SECURITY_ARSENAL
@@ -191,7 +183,6 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
             <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
             <div class="flex gap-4">
@@ -206,7 +197,6 @@
 
     </main>
 
-    <!-- LOGIC JAVASCRIPT BUAT HADIRIN EFEK TOGGLE/MELUNCUR -->
     <script>
         function toggleContactForm() {
             const panel = document.getElementById('contact-panel');
@@ -214,12 +204,10 @@
             const icon = document.getElementById('envelope-icon');
             
             if (panel.style.maxHeight === '0px' || !panel.style.maxHeight) {
-                // Saat panel dibuka
                 panel.style.maxHeight = '500px';
                 btnText.innerText = 'Close Panel';
                 icon.className = 'fa-solid fa-xmark text-red-400';
             } else {
-                // Saat panel ditutup
                 panel.style.maxHeight = '0px';
                 btnText.innerText = 'Contact Me';
                 icon.className = 'fa-solid fa-envelope';
