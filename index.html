@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - unad's Portfolio</title>
+    <title>Dashboard - Danuar Asmoro</title>
+    
+    <!-- PRIMARY META TAGS -->
+    <meta name="title" content="Danuar Asmoro - SOC Analyst Portfolio">
+    <meta name="description" content="SOC Analyst | Cybersecurity Researcher | Blue Teamer. Portfolio, verified certifications, and achievements.">
+
+    <!-- OPEN GRAPH / LINKEDIN / WHATSAPP PREVIEW -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Danuar Asmoro - SOC Analyst Portfolio">
+    <meta property="og:description" content="SOC Analyst | Cybersecurity Researcher | Blue Teamer. Portfolio, verified certifications, and achievements.">
+    <meta property="og:image" content="logo.png">
+
     <link rel="icon" type="image/png" href="logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -29,6 +40,7 @@
 
     <main class="max-w-4xl mx-auto px-6 py-16 relative z-10 space-y-12">
         
+        <!-- HEADER -->
         <header class="space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-xs mono tracking-wider animate-pulse">
                 <i class="fa-solid border-2 border-emerald-400 rounded-full p-0.5 w-2 h-2 bg-emerald-400 animate-ping"></i> STATUS: WELCOME TO MY DASHBOARD, LADS!
@@ -44,11 +56,18 @@
             </div>
 
             <p class="text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed">
-    Cybersecurity professional and <span class="text-emerald-400 font-semibold">1st Place Winner of the Smart Innovation Challenge 2025</span>, specializing in Security Operations (SOC) and Blue Teaming. Highly proficient in real-time security monitoring, log analysis, and incident response utilizing industry-standard SIEM platforms.
-</p>
+                Cybersecurity professional and <span class="text-emerald-400 font-semibold">1st Place Winner of the Smart Innovation Challenge 2025</span>, specializing in Security Operations (SOC) and Blue Teaming. Highly proficient in real-time security monitoring, log analysis, and incident response utilizing industry-standard SIEM platforms.
+            </p>
 
+            <!-- CONTAINER TOMBOL UTAMA -->
             <div class="space-y-4 pt-2">
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap items-center gap-3">
+                    <!-- TOMBOL DOWNLOAD CV (NEW) -->
+                    <a href="Danuar_Asmoro_CV.pdf" download class="px-5 py-2.5 bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 font-medium rounded-lg text-sm hover:bg-cyan-500/20 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.25)] transition-all duration-300 flex items-center gap-2 mono group">
+                        <i class="fa-solid fa-file-arrow-down text-sm group-hover:translate-y-0.5 transition-transform"></i>
+                        <span>[DOWNLOAD_CV.PDF]</span>
+                    </a>
+
                     <a href="#cases" class="px-5 py-2.5 bg-white text-black font-medium rounded-lg text-sm hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-300">
                         View Investigations
                     </a>
@@ -58,6 +77,7 @@
                     </button>
                 </div>
 
+                <!-- PANEL FORMSPREE -->
                 <div id="contact-panel" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out max-w-xl">
                     <div class="p-5 mt-2 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-md">
                         <h3 class="text-xs mono uppercase tracking-[0.2em] text-cyan-400 flex items-center gap-2 mb-4">
@@ -93,6 +113,7 @@
             </div>
         </header>
 
+        <!-- NAVIGATION -->
         <nav class="flex flex-wrap gap-2 border-b border-slate-900 pb-4 mono text-xs pt-4">
             <a href="index.html" class="px-4 py-2 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 transition-all">
                 <i class="fa-solid fa-terminal mr-1"></i> Dashboard
@@ -108,6 +129,7 @@
             </a>
         </nav>
 
+        <!-- STATS SECTION -->
         <section class="grid grid-cols-2 md:grid-cols-3 gap-4 font-mono mono text-xs pt-4">
             <div class="p-4 rounded-xl border border-slate-900 bg-slate-950/40 backdrop-blur-sm">
                 <div class="text-slate-500 uppercase tracking-wider">Daily Alerts Triaged</div>
@@ -123,6 +145,7 @@
             </div>
         </section>
 
+        <!-- CASE STUDIES SECTION -->
         <section id="cases" class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-terminal text-cyan-500"></i> // CASE_STUDIES_AND_INVESTIGATIONS
@@ -163,6 +186,7 @@
             </div>
         </section>
 
+        <!-- SECURITY ARSENAL SECTION -->
         <section class="space-y-6 pt-4">
             <h2 class="text-xs mono uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2">
                 <i class="fa-solid fa-shield-halved text-emerald-400"></i> // SECURITY_ARSENAL
@@ -183,6 +207,7 @@
             </div>
         </section>
 
+        <!-- FOOTER -->
         <footer class="pt-8 border-t border-slate-900 text-center mono text-xs text-slate-600 flex justify-between items-center">
             <div>© 2026 Danuar Asmoro. Perimeter Secured.</div>
             <div class="flex gap-4">
@@ -197,6 +222,7 @@
 
     </main>
 
+    <!-- LOGIC JAVASCRIPT -->
     <script>
         function toggleContactForm() {
             const panel = document.getElementById('contact-panel');
